@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hejtman — Zásady ochrany osobních údajů a podpora</title>
-<meta name="description" content="Zásady ochrany osobních údajů a kontakt na podporu pro hru Hejtman.">
+<title>Hejtman — podmínky, ochrana soukromí a podpora</title>
+<meta name="description" content="Podmínky služby, zásady ochrany osobních údajů, smazání účtu a podpora pro hru Hejtman.">
 <style>
   :root{
     --parch:#F3E9D0; --card:#F8EED4; --edge:#DCC8A0; --ink:#3B2E1E; --inkSoft:#6E5832;
     --red:#8F2B23; --redDeep:#6E1D17; --gold:#C9A24B; --goldEdge:#B08D42; --dark:#2A2118;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth; scroll-padding-top:78px}
   body{
     margin:0; background:var(--dark); color:var(--ink);
     font-family:"Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
     line-height:1.65; font-size:17px;
   }
-  .wrap{max-width:780px; margin:0 auto; padding:0 20px 72px;}
+  .wrap{max-width:860px; margin:0 auto; padding:0 20px 72px;}
   header{
     background:linear-gradient(180deg,#3A2C1A,#14100A);
     text-align:center; padding:40px 20px 34px; border-bottom:3px solid var(--goldEdge);
@@ -50,9 +50,20 @@
   .contact{background:#F2E7C9; border:1px solid var(--goldEdge); border-radius:12px;
     padding:20px 24px; margin:16px 0; text-align:center;}
   .contact a{font-size:20px; font-weight:bold; color:var(--redDeep); text-decoration:none;}
+  .danger{border-left-color:var(--red);}
+  .button{display:inline-block; padding:10px 18px; margin:8px 0; border-radius:999px;
+    background:var(--red); color:#fff; text-decoration:none; font-weight:bold;}
+  .button:hover,.button:focus{background:var(--redDeep);}
   .muted{color:var(--inkSoft); font-size:14px;}
   footer{text-align:center; color:#B79A5E; font-size:13px; padding:26px 20px 0;}
   footer .en{color:#8F7A50; margin-top:6px;}
+  @media(max-width:600px){
+    body{font-size:16px;}
+    .wrap{padding:0 10px 48px;}
+    main{padding:26px 20px 14px;}
+    nav{position:static;}
+    html{scroll-padding-top:12px;}
+  }
 </style>
 </head>
 <body>
@@ -71,11 +82,13 @@
   </svg>
   <h1>HEJTMAN</h1>
   <p class="tag">Věděním dobývej panství</p>
-  <p class="upd">Poslední aktualizace: 14. července 2026</p>
+  <p class="upd">Účinné od 1. srpna 2026 · Poslední aktualizace: 1. srpna 2026</p>
 </header>
 
 <nav>
+  <a href="#podminky">Podmínky služby</a>
   <a href="#zasady">Zásady ochrany údajů</a>
+  <a href="#smazani-uctu">Smazání účtu</a>
   <a href="#prava">Vaše práva</a>
   <a href="#podpora">Podpora</a>
 </nav>
@@ -83,59 +96,100 @@
 <div class="wrap">
 <main>
 
+  <h2 id="podminky">Podmínky služby</h2>
+  <p>Tyto podmínky upravují používání mobilní vědomostní hry <strong>Hejtman</strong> (dále jen „aplikace“ nebo „hra“), kterou provozuje společnost DyZi s.r.o., Česká republika (dále jen „provozovatel“). Používáním aplikace potvrzujete, že jste se s podmínkami seznámili.</p>
+
+  <h3>Hra a uživatelský účet</h3>
+  <p>Hru lze začít jako host. Pro uložení a synchronizaci postupu aplikace vytvoří pseudonymní uživatelský identifikátor. Účet lze volitelně propojit s e-mailem, Apple nebo Google. Za zabezpečení přístupu ke svému e-mailu a účtu poskytovatele odpovídá uživatel.</p>
+
+  <h3>Licence a pravidla používání</h3>
+  <p>Provozovatel vám poskytuje nevýhradní, nepřenosnou a odvolatelnou licenci používat aplikaci pro osobní a nekomerční účely. Nesmíte obcházet zabezpečení, zasahovat do provozu služby, získávat neoprávněný přístup k datům ani aplikaci využívat v rozporu s právními předpisy nebo právy jiných osob.</p>
+
+  <h3>Obsah hry</h3>
+  <p>Otázky a vysvětlení slouží pro zábavu a vzdělávání. Přesnost obsahu průběžně kontrolujeme, přesto nemůžeme zaručit, že bude každý údaj vždy úplný nebo bez chyby. Chybnou otázku lze nahlásit přímo ve hře.</p>
+
+  <h3>Cena a virtuální předměty</h3>
+  <p>Aktuální verze hry je zdarma a neobsahuje placené nákupy ani předplatné. Herní měny, body a jiné virtuální předměty nemají peněžní hodnotu a nelze je směnit za peníze.</p>
+
+  <h3>Dostupnost a změny</h3>
+  <p>Snažíme se udržovat aplikaci dostupnou a bezpečnou, ale nepřetržitou dostupnost nezaručujeme. Hru můžeme aktualizovat, měnit nebo ukončit. Podstatné změny těchto podmínek zveřejníme na této stránce s novým datem účinnosti.</p>
+
+  <h3>Ukončení a smazání</h3>
+  <p>Aplikaci můžete kdykoli přestat používat a svůj účet smazat postupem v sekci <a href="#smazani-uctu">Smazání účtu</a>. Při závažném nebo opakovaném porušování těchto podmínek můžeme přístup k účtu omezit či ukončit.</p>
+
+  <h3>Odpovědnost a rozhodné právo</h3>
+  <p>V rozsahu dovoleném právními předpisy nenese provozovatel odpovědnost za nepřímé škody nebo ztrátu herního postupu způsobenou okolnostmi mimo jeho přiměřenou kontrolu. Tím nejsou dotčena práva spotřebitele, která nelze smluvně omezit. Podmínky se řídí právem České republiky; zákonná práva spotřebitelů v zemi jejich bydliště zůstávají zachována.</p>
+
   <h2 id="zasady">Zásady ochrany osobních údajů</h2>
-  <p>Tyto zásady popisují, jaké údaje aplikace <strong>Hejtman</strong> (dále jen „aplikace" nebo „hra") zpracovává, proč a jak s nimi nakládá. Provozovatelem a správcem údajů je fyzická osoba Václav Žižka (dále jen „provozovatel"). Kontakt najdete v sekci <a href="#podpora">Podpora</a>.</p>
+  <p>Tyto zásady popisují, jaké údaje aplikace Hejtman zpracovává, proč a jak s nimi nakládá. Správcem osobních údajů je <strong>DyZi s.r.o., Česká republika</strong>. Kontaktní údaje najdete v sekci <a href="#podpora">Podpora</a>.</p>
 
   <div class="box">
-    <strong>Ve zkratce:</strong> Hru lze hrát bez účtu. Nezobrazujeme reklamy, nepoužíváme sledovací nástroje ani analytiku třetích stran a vaše údaje neprodáváme. Ukládáme jen to, co je potřeba k běhu hry a uchování vašeho postupu.
+    <strong>Ve zkratce:</strong> Hru lze hrát bez uvedení jména nebo e-mailu. Nezobrazujeme reklamy, nepoužíváme reklamní sledování ani analytiku třetích stran a osobní údaje neprodáváme. Zpracováváme údaje potřebné pro účet, fungování hry, synchronizaci postupu, přátelské zápasy a hlášení chybných otázek.
   </div>
 
   <h3>Jaké údaje zpracováváme</h3>
   <ul>
-    <li><strong>Anonymní účet:</strong> Při prvním spuštění vám vznikne náhodný identifikátor (anonymní účet). Neobsahuje žádné osobní údaje a slouží k uložení vašeho postupu.</li>
-    <li><strong>Přihlášení přes Apple nebo Google (volitelné):</strong> Pokud si účet propojíte, získáme od poskytovatele vaši e-mailovou adresu, případně jméno a identifikátor účtu. Slouží k tomu, abyste o postup nepřišli a mohli se přihlásit na jiném zařízení.</li>
-    <li><strong>Herní profil:</strong> Jméno vašeho rodu a zvolená barva erbu, které si nastavíte ve hře.</li>
-    <li><strong>Herní data:</strong> Průběh a výsledky zápasů a herní statistiky (např. dobytá panství, úspěšnost).</li>
-    <li><strong>Technické údaje:</strong> Přihlašovací token je bezpečně uložen přímo ve vašem zařízení (zabezpečené úložiště systému).</li>
+    <li><strong>Pseudonymní účet:</strong> Při prvním použití online funkcí vznikne náhodný uživatelský identifikátor. Není tvořen vaším jménem ani kontaktními údaji, je však spojen s herním postupem a zacházíme s ním jako s osobním údajem.</li>
+    <li><strong>Volitelné přihlášení:</strong> Při propojení e-mailem, Apple nebo Google zpracujeme e-mailovou adresu, identifikátor poskytovatele a případně jméno, které poskytovatel předá.</li>
+    <li><strong>Herní profil a postup:</strong> Název rodu, barva erbu, výsledky a historie zápasů, zodpovězené otázky, statistiky, postup kampaní a stav herních měn.</li>
+    <li><strong>Přátelské zápasy:</strong> Po dobu vytváření a hraní společného zápasu zpracováváme údaje potřebné pro propojení hráčů a synchronizaci průběhu hry.</li>
+    <li><strong>Hlášení otázek:</strong> Důvod hlášení a volitelná textová poznámka. Po smazání účtu může hlášení zůstat zachováno pro opravu obsahu, ale vazba na váš účet je odstraněna.</li>
+    <li><strong>Technické a bezpečnostní údaje:</strong> Poskytovatel infrastruktury může při připojení zpracovat IP adresu, čas požadavku a provozní či bezpečnostní záznamy. Přihlašovací relace je v zařízení uložena v zabezpečeném systémovém úložišti.</li>
   </ul>
 
-  <h3>Proč údaje zpracováváme</h3>
+  <h3>Účely a právní základy</h3>
   <ul>
-    <li>Provoz hry a uchování vašeho postupu a statistik.</li>
-    <li>Propojení a obnovení účtu při přihlášení přes Apple nebo Google.</li>
-    <li>Zajištění správné funkce a odstraňování chyb.</li>
+    <li><strong>Provoz účtu, hry a synchronizace postupu:</strong> plnění smlouvy, kterou s vámi tvoří tyto podmínky.</li>
+    <li><strong>Přihlášení a propojení identity:</strong> plnění smlouvy a váš dobrovolný požadavek na použití zvolené metody.</li>
+    <li><strong>Bezpečnost, prevence zneužití, řešení chyb a zlepšování správnosti otázek:</strong> náš oprávněný zájem na bezpečném a spolehlivém provozu hry.</li>
+    <li><strong>Plnění právních povinností:</strong> pokud nám uchování nebo poskytnutí konkrétních údajů uloží právní předpis.</li>
   </ul>
+  <p>Bez pseudonymního identifikátoru nelze používat online ukládání postupu a další serverové funkce. E-mail, Apple ani Google nejsou pro hraní povinné.</p>
 
-  <h3>Kde jsou údaje uloženy</h3>
-  <p>Údaje jsou ukládány u poskytovatele <strong>Supabase</strong>, který pro nás zajišťuje databázi a přihlašování jako zpracovatel. Pokud se přihlásíte přes Apple nebo Google, vystupují tito poskytovatelé jako zpracovatelé pouze pro účel ověření vaší identity. S jinými třetími stranami údaje nesdílíme a nepředáváme je pro marketingové účely.</p>
+  <h3>Příjemci, uložení a předávání</h3>
+  <p>Databázi, autentizaci a online komunikaci zajišťuje <strong>Supabase</strong> jako náš zpracovatel. Při zvoleném přihlášení zpracovávají autentizační údaje také Apple nebo Google podle vlastních zásad. Údaje nepředáváme pro reklamu ani marketing. Poskytovatelé mohou data zpracovávat také mimo Evropský hospodářský prostor za použití odpovídajících smluvních a právních záruk.</p>
+  <p class="muted">Další informace: <a href="https://supabase.com/privacy">Supabase Privacy</a>, <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>, <a href="https://policies.google.com/privacy">Google Privacy</a>.</p>
+
+  <h3>Zabezpečení</h3>
+  <p>Přenos mezi aplikací a serverem je šifrován pomocí HTTPS/TLS. Přihlašovací údaje jsou v podporovaných mobilních systémech ukládány v zabezpečeném úložišti zařízení a přístup k databázovým záznamům je omezen podle identity uživatele. Žádný způsob ukládání však nemůže zaručit absolutní bezpečnost.</p>
 
   <h3>Reklamy a sledování</h3>
-  <p>Aplikace <strong>neobsahuje reklamy</strong>, neobsahuje reklamní identifikátory ani analytické či sledovací nástroje třetích stran a nesleduje vás napříč jinými aplikacemi či weby.</p>
+  <p>Aplikace neobsahuje reklamy, reklamní identifikátory ani nástroje pro sledování uživatelů napříč aplikacemi a weby. V současné verzi nepoužíváme analytiku ani crash-reporting třetích stran.</p>
 
-  <h3>Jak dlouho údaje uchováváme</h3>
-  <p>Údaje uchováváme po dobu, kdy aktivně používáte účet. Na požádání účet i související údaje smažeme (viz níže).</p>
+  <h3>Doba uchování</h3>
+  <p>Účet a údaje spojené s herním postupem uchováváme do smazání účtu. Hlášení chybné otázky může po smazání účtu zůstat zachováno bez identifikátoru uživatele. Omezené provozní, bezpečnostní nebo záložní záznamy mohou poskytovatelé uchovávat po dobu nezbytnou podle svých retenčních cyklů a právních povinností; nepoužíváme je k obnovení smazaného herního účtu.</p>
 
   <h3>Děti</h3>
-  <p>Aplikace není cílena na děti mladší 15 let a vědomě od nich neshromažďuje osobní údaje. Pokud se domníváte, že nám dítě takové údaje poskytlo, kontaktujte nás a údaje odstraníme.</p>
+  <p>Aplikace není určena dětem mladším 15 let a vědomě od nich neshromažďujeme osobní údaje. Pokud se domníváte, že nám dítě takové údaje poskytlo, kontaktujte nás.</p>
 
-  <h2 id="prava">Vaše práva a smazání účtu</h2>
-  <p>V souladu s GDPR máte právo na přístup ke svým údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost, a právo podat námitku. Pro uplatnění jakéhokoli práva nebo <strong>smazání účtu a všech dat</strong> nám napište na e-mail uvedený v sekci Podpora — žádost vyřídíme bez zbytečného odkladu. Máte také právo obrátit se na Úřad pro ochranu osobních údajů (uoou.gov.cz).</p>
+  <h2 id="smazani-uctu">Smazání účtu Hejtman</h2>
+  <div class="box danger">
+    <strong>Přímo v aplikaci:</strong> Otevřete <strong>Nastavení → Účet → Smazat účet</strong> a potvrďte volbu „Smazat natrvalo“. Stejnou cestu mohou použít hosté i uživatelé propojení e-mailem, Apple nebo Google.
+  </div>
+  <p>Smazáním se odstraní autentizační účet, herní profil, historie zápasů, zodpovězené otázky, statistiky, postup kampaní a herní měny. Propojené přihlašovací identity se od účtu odpojí a místní profil a relace se odstraní ze zařízení. Hlášení chybných otázek mohou zůstat zachována pouze bez vazby na váš účet.</p>
+  <p>Pokud jste aplikaci odinstalovali nebo se do ní nemůžete přihlásit, můžete požádat o smazání e-mailem. Pište pokud možno z e-mailové adresy propojené s účtem. U hostovského účtu uveďte název rodu a přibližné datum posledního použití; můžeme si vyžádat další údaje nutné k bezpečnému dohledání účtu.</p>
+  <p><a class="button" href="mailto:vaclav@dyzi.cz?subject=%C5%BD%C3%A1dost%20o%20smaz%C3%A1n%C3%AD%20%C3%BA%C4%8Dtu%20Hejtman">Požádat o smazání účtu</a></p>
+  <p class="muted">Žádost vyřídíme bez zbytečného odkladu, nejpozději v zákonné lhůtě. Pokud účet podle poskytnutých údajů nelze bezpečně určit, vysvětlíme další postup.</p>
+
+  <h2 id="prava">Vaše práva</h2>
+  <p>Za podmínek stanovených GDPR máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost a právo vznést námitku proti zpracování založenému na oprávněném zájmu. Máte také právo podat stížnost u <a href="https://uoou.gov.cz/">Úřadu pro ochranu osobních údajů</a>. Pro uplatnění práva nás kontaktujte; před vyřízením můžeme přiměřeně ověřit vaši totožnost.</p>
 
   <h2 id="podpora">Podpora a kontakt</h2>
-  <p>Máte dotaz, narazili jste na chybu, nebo chcete smazat účet? Napište nám — rádi pomůžeme.</p>
+  <p>Máte dotaz, narazili jste na chybu nebo chcete uplatnit právo související s osobními údaji? Napište nám.</p>
   <div class="contact">
-    <p class="muted" style="margin:0 0 6px">Kontakt na provozovatele a podporu</p>
-    <a href="mailto:vaclavzizka8@gmail.com">vaclav@dyzi.cz</a>
+    <p class="muted" style="margin:0 0 6px">Provozovatel, správce údajů a podpora</p>
+    <p><strong>DyZi s.r.o. · Česká republika</strong></p>
+    <a href="mailto:vaclav@dyzi.cz">vaclav@dyzi.cz</a>
     <p class="muted" style="margin:10px 0 0">Na e-maily obvykle odpovídáme do několika pracovních dnů.</p>
   </div>
 
-  <h3>Změny těchto zásad</h3>
-  <p>Zásady můžeme čas od času aktualizovat. Aktuální znění je vždy dostupné na této stránce; datum poslední změny je uvedeno nahoře.</p>
+  <h3>Změny této stránky</h3>
+  <p>Podmínky a zásady můžeme přiměřeně aktualizovat, například při změně funkcí nebo právních požadavků. Aktuální znění a datum poslední změny budou vždy uvedeny na této stránce.</p>
 
 </main>
 
 <footer>
-  <p>© 2026 Hejtman · Václav Žižka</p>
+  <p>© 2026 Hejtman · DyZi s.r.o.</p>
   <p class="en">An English version of this policy is available on request at the e-mail above.</p>
 </footer>
 </div>
