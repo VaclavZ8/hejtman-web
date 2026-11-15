@@ -39,7 +39,7 @@
   <p>Tyto zásady popisují, jaké údaje aplikace Hejtman zpracovává, proč a jak s nimi nakládá. Správcem osobních údajů je <strong>DyZi s.r.o., Česká republika</strong>. Kontaktní údaje najdete na stránce <a href="/podpora/">Podpora</a>.</p>
 
   <div class="box">
-    <strong>Ve zkratce:</strong> Hru lze hrát bez uvedení jména nebo e-mailu. Zpracováváme údaje potřebné pro účet, fungování hry, synchronizaci postupu, přátelské a soutěžní zápasy a hlášení chybných otázek. Osobní údaje neprodáváme a nepoužíváme analytiku ani crash-reporting třetích stran. V mobilní aplikaci si můžete dobrovolně pustit odměňované reklamní video od Google AdMob; v EU se vás před první reklamou zeptáme na souhlas.
+    <strong>Ve zkratce:</strong> Hru lze hrát bez uvedení jména nebo e-mailu. Zpracováváme údaje potřebné pro účet, fungování hry, synchronizaci postupu, přátelské a soutěžní zápasy a hlášení chybných otázek. Placené nákupy ověřuje RevenueCat. Osobní údaje neprodáváme a nepoužíváme analytiku ani crash-reporting třetích stran. V mobilní aplikaci si můžete dobrovolně pustit odměňované reklamní video od Google AdMob; v EU se vás před první reklamou zeptáme na souhlas.
   </div>
 
   <h3>Jaké údaje zpracováváme</h3>
@@ -50,6 +50,7 @@
     <li><strong>Hra s ostatními:</strong> Po dobu vytváření a hraní přátelského nebo soutěžního zápasu zpracováváme údaje potřebné pro propojení hráčů a synchronizaci průběhu hry. Ostatní hráči vidí název vašeho rodu, erb a výsledky.</li>
     <li><strong>Herní události:</strong> Záznamy o tom, jak hra probíhá (například začátek a výsledek zápasu nebo kroky průvodce), spojené s pseudonymním identifikátorem. Ukládáme je u našeho zpracovatele Supabase a používáme je jen ke zlepšování hry.</li>
     <li><strong>Hlášení otázek:</strong> Důvod hlášení a volitelná textová poznámka. Po smazání účtu může hlášení zůstat zachováno pro opravu obsahu, ale vazba na váš účet je odstraněna.</li>
+    <li><strong>Nákupy (jen mobilní aplikace):</strong> Pokud koupíte předplatné nebo zlaťáky, zpracujeme pseudonymní identifikátor hráče, zakoupený produkt, identifikátor transakce obchodu, datum, cenu a měnu, obchod (App Store nebo Google Play), stav a dobu platnosti předplatného a základní údaje o zařízení a verzi aplikace. Platební údaje, jako je číslo karty, zpracovává jen Apple nebo Google; my je nedostáváme.</li>
     <li><strong>Reklamní videa (jen mobilní aplikace):</strong> Údaje popsané v části <a href="#reklamy">Reklamy</a> níže.</li>
     <li><strong>Technické a bezpečnostní údaje:</strong> Poskytovatel infrastruktury může při připojení zpracovat IP adresu, čas požadavku a provozní či bezpečnostní záznamy. Přihlašovací relace je v zařízení uložena v zabezpečeném systémovém úložišti.</li>
   </ul>
@@ -59,6 +60,7 @@
     <li><strong>Provoz účtu, hry a synchronizace postupu:</strong> plnění smlouvy, kterou s vámi tvoří <a href="/podminky/">podmínky služby</a>.</li>
     <li><strong>Přihlášení a propojení identity:</strong> plnění smlouvy a váš dobrovolný požadavek na použití zvolené metody.</li>
     <li><strong>Připsání odměny za reklamní video:</strong> plnění smlouvy.</li>
+    <li><strong>Placené nákupy a předplatné</strong> (ověření platby, připsání zakoupeného obsahu, obnovení nákupů, řešení reklamací): plnění smlouvy; uchování dokladů o nákupech: plnění právních povinností.</li>
     <li><strong>Zobrazení reklam:</strong> náš oprávněný zájem na financování bezplatné hry; ukládání a čtení informací v zařízení a personalizace reklam jen s vaším souhlasem tam, kde ho právo vyžaduje.</li>
     <li><strong>Bezpečnost, prevence zneužití, řešení chyb, zlepšování hry a správnosti otázek:</strong> náš oprávněný zájem na bezpečném a spolehlivém provozu hry.</li>
     <li><strong>Plnění právních povinností:</strong> pokud nám uchování nebo poskytnutí konkrétních údajů uloží právní předpis.</li>
@@ -66,8 +68,8 @@
   <p>Bez pseudonymního identifikátoru nelze používat online ukládání postupu a další serverové funkce. E-mail, Apple ani Google nejsou pro hraní povinné. Sledování reklam není podmínkou hraní.</p>
 
   <h3>Příjemci, uložení a předávání</h3>
-  <p>Databázi, autentizaci a online komunikaci zajišťuje <strong>Supabase</strong> jako náš zpracovatel. Při zvoleném přihlášení zpracovávají autentizační údaje také Apple nebo Google podle vlastních zásad. Reklamní videa dodává <strong>Google AdMob</strong>, viz níže. Jiným subjektům údaje pro reklamu ani marketing nepředáváme a nikomu je neprodáváme. Poskytovatelé mohou data zpracovávat také mimo Evropský hospodářský prostor za použití odpovídajících smluvních a právních záruk.</p>
-  <p class="muted">Další informace: <a href="https://supabase.com/privacy">Supabase Privacy</a>, <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>, <a href="https://policies.google.com/privacy">Google Privacy</a>.</p>
+  <p>Databázi, autentizaci a online komunikaci zajišťuje <strong>Supabase</strong> jako náš zpracovatel. Při zvoleném přihlášení zpracovávají autentizační údaje také Apple nebo Google podle vlastních zásad. Placené nákupy ověřuje a eviduje <strong>RevenueCat, Inc.</strong> (USA) jako náš zpracovatel; předáváme mu jen pseudonymní identifikátor hráče, nikoli jméno ani e-mail. Platby zpracovávají <strong>Apple</strong> (App Store) a <strong>Google</strong> (Google Play) jako samostatní správci podle svých zásad. Reklamní videa dodává <strong>Google AdMob</strong>, viz níže. Jiným subjektům údaje pro reklamu ani marketing nepředáváme a nikomu je neprodáváme. Poskytovatelé mohou data zpracovávat také mimo Evropský hospodářský prostor za použití odpovídajících smluvních a právních záruk.</p>
+  <p class="muted">Další informace: <a href="https://supabase.com/privacy">Supabase Privacy</a>, <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy</a>, <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>, <a href="https://policies.google.com/privacy">Google Privacy</a>.</p>
 
   <h3 id="reklamy">Reklamy</h3>
   <p>Mobilní aplikace nabízí <strong>odměňovaná videa</strong>: krátkou reklamu si pustíte sami, například za zlaťáky nebo zápas navíc. Bez vašeho klepnutí se nikdy nepřehraje a jinde se reklamy nezobrazují. Webová verze hry reklamy nemá.</p>
@@ -84,7 +86,7 @@
   <p>Přenos mezi aplikací a serverem je šifrován pomocí HTTPS/TLS. Přihlašovací údaje jsou v podporovaných mobilních systémech ukládány v zabezpečeném úložišti zařízení a přístup k databázovým záznamům je omezen podle identity uživatele. Žádný způsob ukládání však nemůže zaručit absolutní bezpečnost.</p>
 
   <h3>Doba uchování</h3>
-  <p>Účet a údaje spojené s herním postupem uchováváme do smazání účtu. Hlášení chybné otázky může po smazání účtu zůstat zachováno bez identifikátoru uživatele. Omezené provozní, bezpečnostní nebo záložní záznamy mohou poskytovatelé uchovávat po dobu nezbytnou podle svých retenčních cyklů a právních povinností; nepoužíváme je k obnovení smazaného herního účtu. Údaje, které při reklamě zpracovává Google, uchovává Google podle svých zásad.</p>
+  <p>Účet a údaje spojené s herním postupem uchováváme do smazání účtu. Hlášení chybné otázky může po smazání účtu zůstat zachováno bez identifikátoru uživatele. Omezené provozní, bezpečnostní nebo záložní záznamy mohou poskytovatelé uchovávat po dobu nezbytnou podle svých retenčních cyklů a právních povinností; nepoužíváme je k obnovení smazaného herního účtu. Záznamy o placených nákupech u RevenueCatu na žádost o smazání účtu odstraníme, pokud je nemusíme uchovat jako účetní či daňový doklad; doklady o platbách vedou také Apple a Google. Údaje, které při reklamě zpracovává Google, uchovává Google podle svých zásad.</p>
 
   <h3>Děti</h3>
   <p>Aplikace není určena dětem mladším 15 let a vědomě od nich neshromažďujeme osobní údaje. Pokud se domníváte, že nám dítě takové údaje poskytlo, kontaktujte nás.</p>
