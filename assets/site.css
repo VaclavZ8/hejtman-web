@@ -83,3 +83,25 @@ footer .en{color:#8F7A50; margin-top:6px;}
   .hero h1{font-size:36px;}
   .shots{grid-template-columns:repeat(2,1fr);}
 }
+
+/* Právní stránky */
+h4{color:var(--redDeep); font-size:17px; margin:18px 0 2px;}
+ol{margin:10px 0; padding-left:24px;}
+.toc{background:var(--card); border:1px solid var(--edge); border-radius:10px; padding:12px 20px; margin:16px 0; font-size:15px;}
+.toc strong{display:block; margin-bottom:2px;}
+.toc ol{columns:2; column-gap:28px; margin:4px 0; padding-left:22px;}
+.toc li{margin:2px 0; break-inside:avoid;}
+.tablewrap{overflow-x:auto; margin:14px 0;}
+table{width:100%; border-collapse:collapse; font-size:15px; background:var(--card);}
+th,td{border:1px solid var(--edge); padding:8px 10px; text-align:left; vertical-align:top;}
+th{background:#EFE1BF; color:var(--redDeep);}
+td ul{margin:0; padding-left:18px;}
+.form{background:#FFF9EA; border:1px dashed var(--goldEdge); border-left:5px solid var(--gold);}
+.form p{margin:6px 0;}
+footer .ident{max-width:640px; margin:6px auto 0; line-height:1.5;}
+
+@media(max-width:600px){
+  .toc ol{columns:1;}
+  table{font-size:14px;}
+  th,td{padding:6px 7px;}
+}
