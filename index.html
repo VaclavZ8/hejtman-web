@@ -19,7 +19,8 @@
 <script>
 (function () {
   var map = { podminky: "/podminky/", zasady: "/soukromi/", prava: "/soukromi/#prava",
-    "smazani-uctu": "/smazani-uctu/", podpora: "/podpora/" };
+    "smazani-uctu": "/smazani-uctu/", podpora: "/podpora/", nakupy: "/nakupy/",
+    odstoupeni: "/nakupy/#odstoupeni", reklamace: "/nakupy/#reklamace" };
   var target = map[location.hash.slice(1)];
   if (target) location.replace(target);
 })();
@@ -60,8 +61,8 @@
   </div>
 
   <h2>Hraj hned, bez registrace</h2>
-  <p>Hru začneš jako host, bez jména a e-mailu. Až budeš chtít mít postup v bezpečí i na dalším zařízení, propojíš účet s e-mailem, Apple nebo Google a nic neztratíš.</p>
-  <p>Hejtman je zdarma. Za zlaťáky nebo zápas navíc si můžeš dobrovolně pustit krátké video.</p>
+  <p>Hru začneš jako host, bez jména a e-mailu. Až budeš chtít mít postup v bezpečí i na dalším zařízení, propojíš účet s e-mailem, Apple nebo Google a nic neztratíš. Propojený účet potřebuješ i pro soutěž proti živým hráčům.</p>
+  <p>Hejtman je zdarma a webová verze je bez reklam. V mobilní aplikaci se zpravidla po každé třetí dohrané hře může ukázat reklama. Za zlaťáky nebo zápas navíc si tam také můžeš dobrovolně pustit krátké video. Vlastní otázky jsou zdarma pro všechny.</p>
 
   <h2>Kontakt</h2>
   <p>Dotazy, nápady a hlášení chyb posílej na <a href="mailto:vaclav@dyzi.cz">vaclav@dyzi.cz</a>. Více na stránce <a href="/podpora/">Podpora</a>.</p>
@@ -69,8 +70,9 @@
 </main>
 
 <footer>
-  <p class="links"><a href="/">Hejtman</a> <a href="/podminky/">Podmínky služby</a> <a href="/soukromi/">Ochrana soukromí</a> <a href="/smazani-uctu/">Smazání účtu</a> <a href="/podpora/">Podpora</a></p>
+  <p class="links"><a href="/">Hejtman</a> <a href="/podminky/">Podmínky služby</a> <a href="/nakupy/">Nákupy a reklamace</a> <a href="/soukromi/">Ochrana soukromí</a> <a href="/smazani-uctu/">Smazání účtu</a> <a href="/podpora/">Podpora</a></p>
   <p>© 2026 Hejtman · DyZi s.r.o.</p>
+  <p class="ident">DyZi s.r.o., IČO 21365792, se sídlem Zd. Fibicha 1637/40, České Budějovice 6, 370 08 České Budějovice, zapsaná v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 34069 · <a href="mailto:vaclav@dyzi.cz">vaclav@dyzi.cz</a></p>
 </footer>
 </div>
 </body>
