@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hejtman · Věděním dobývej panství</title>
-<meta name="description" content="Vědomostní hra ze středověkého Českého království. Odpovídej na otázky, dobývej panství a veď svůj rod proti soupeřům.">
+<meta name="description" content="Vědomostní hra ze středověkého Českého království. Odpovídej na otázky, zabírej kraje a veď svůj rod proti soupeřům. Kdo ví víc, ten vládne.">
 <link rel="canonical" href="https://hejtman.eu/">
 <link rel="icon" href="/assets/erb.svg" type="image/svg+xml">
 <meta name="theme-color" content="#2A2118">
@@ -12,9 +12,10 @@
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="Hejtman">
 <meta property="og:title" content="Hejtman · Věděním dobývej panství">
-<meta property="og:description" content="Vědomostní hra ze středověkého Českého království. Odpovídej na otázky, dobývej panství a veď svůj rod proti soupeřům.">
+<meta property="og:description" content="Vědomostní hra ze středověkého Českého království. Odpovídej na otázky, zabírej kraje a veď svůj rod proti soupeřům.">
 <meta property="og:url" content="https://hejtman.eu/">
 <meta property="og:image" content="https://hejtman.eu/assets/img/og.jpg">
+<link rel="preload" href="/assets/fonts/pirata-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script>
 (function () {
@@ -27,48 +28,157 @@
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3.5 17.5h17l1-10-5 4L12 5l-4.5 6.5-5-4z"/><path d="M3.5 20.5h17"/><circle cx="12" cy="13.5" r="1.2"/></symbol>
+  <symbol id="i-swords" viewBox="0 0 24 24"><path d="M4 4l11 11M13 17l4-4M15 15l4 4M20 4L9 15M7 13l4 4M9 15l-4 4"/><circle cx="19.6" cy="19.6" r=".9"/><circle cx="4.4" cy="19.6" r=".9"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M9 14.5l2 2 4-4"/></symbol>
+  <symbol id="i-friends" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.4 2.7-6 6-6s6 2.6 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.1c.3-.1.7-.1 1-.1 2.8 0 4.5 2.1 4.5 5"/></symbol>
+  <symbol id="i-quill" viewBox="0 0 24 24"><path d="M20.5 3.5C13 4.5 8.5 9 7 15.5l-.8 3.3 3.3-1.2C15 15 19 10 20.5 3.5z"/><path d="M5 21l6.5-9"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.8-3.3 8.3-7.5 9.8-4.2-1.5-7.5-5-7.5-9.8V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.5"/><path d="M12 9.5v5"/></symbol>
+</svg>
+
 <header class="hero">
-  <img class="erb" src="/assets/erb.svg" alt="" width="120" height="177">
-  <h1>HEJTMAN</h1>
+  <img class="erb" src="/assets/erb.svg" alt="" width="112" height="165">
+  <p class="kicker">Vědomostní hra ze středověkých Čech</p>
+  <h1>Hejtman</h1>
   <p class="tag">Věděním dobývej panství</p>
-  <p class="lead">Vědomostní hra ze středověkého Českého království. Odpovídej na otázky, dobývej kraje a veď svůj rod proti soupeřícím hejtmanům.</p>
+  <p class="lead">Odpovídej na otázky, zabírej kraje Českého království a veď svůj rod proti soupeřům. Kdo ví víc, ten vládne.</p>
   <div class="stores">
     <a class="store" href="https://apps.apple.com/app/id6791612459"><small>Stáhnout v</small><span>App Store</span></a>
     <a class="store" href="https://play.google.com/store/apps/details?id=cz.hejtman.app"><small>Nainstalovat z</small><span>Google Play</span></a>
   </div>
+  <ul class="facts">
+    <li>Základní hra zdarma</li>
+    <li>iOS, Android i web</li>
+    <li>Hraj hned, bez registrace</li>
+  </ul>
+  <a class="scroll-hint" href="#jak-se-hraje">Jak se hraje <span aria-hidden="true">↓</span></a>
 </header>
 
-<div class="wrap">
-<main>
+<main class="land">
 
-  <h2>O co ve hře jde</h2>
-  <p>Každá správná odpověď je tah na mapě. Zaber volné panství, napadni sousední kraj a ubraň svůj hrad, když na tebe zaútočí soupeř. Kdo ví víc, ten vládne.</p>
+  <section class="land-sec" id="jak-se-hraje" aria-labelledby="h-jak">
+    <div class="sec-head">
+      <p class="kicker">Jak se hraje</p>
+      <h2 id="h-jak">Od záboru země po pád sídla</h2>
+      <p class="sec-lead">Tři rody, mapa Království českého a otázky, které rozhodují o každém tahu.</p>
+    </div>
 
-  <div class="features">
-    <div class="feature"><h3>Otázka je tah</h3><p>Dějiny, zeměpis, příroda i kultura. Každý souboj o území rozhodne otázka.</p></div>
-    <div class="feature"><h3>Mapové výzvy</h3><p>Ukaž na mapě, kde leží hrad, řeka nebo město. Čím blíž, tím líp.</p></div>
-    <div class="feature"><h3>Denní výzva</h3><p>Každý den nová sada otázek. Vrať se zítra a zkus to znovu.</p></div>
-    <div class="feature"><h3>Soupeřící rody</h3><p>Utkej se se soupeřícími rody o kraje Českého království.</p></div>
-    <div class="feature"><h3>Hra s přáteli</h3><p>Založ zápas a pozvi přátele. Uvidíte, kdo zná Čechy nejlépe.</p></div>
-    <div class="feature"><h3>Soutěž a hodnosti</h3><p>Hraj proti skutečným hráčům a stoupej od zemana až po hejtmana.</p></div>
+    <ol class="steps">
+      <li class="step">
+        <div class="step-text">
+          <span class="seal" aria-hidden="true">1</span>
+          <h3>Vytáhni do boje</h3>
+          <p>Postav se dvěma soupeřícím rodům. V Boji o Korunu má každý protivník své silné stránky: sečtělý Opat zná kroniky a iluminace, Maršálkovým světem jsou mapy a turnaje. V soutěži proti tobě stojí dva skuteční hráči.</p>
+        </div>
+        <figure class="step-shot"><img src="/assets/img/hra-souperi.jpg" alt="Boj o Korunu: proti hráči stojí rody Opat a Maršálek" width="408" height="826" loading="lazy"></figure>
+      </li>
+      <li class="step">
+        <div class="step-text">
+          <span class="seal" aria-hidden="true">2</span>
+          <h3>Zaber zemi</h3>
+          <p>Nejdřív si rody rozdělí volná území na mapě Království českého, od Chrudimska po Brněnsko. Každé panství, které zabereš, je tvoje, dokud ho ubráníš.</p>
+        </div>
+        <figure class="step-shot"><img src="/assets/img/hra-zabor.jpg" alt="Mapa Království českého během záboru země" width="408" height="826" loading="lazy"></figure>
+      </li>
+      <li class="step">
+        <div class="step-text">
+          <span class="seal" aria-hidden="true">3</span>
+          <h3>Každá otázka je jeden tah</h3>
+          <p>Souboj o území rozhodne otázka. Správnou odpovědí ubráníš své panství, nebo získáš nové.</p>
+          <ul class="step-tags" aria-label="Okruhy otázek">
+            <li>Dějiny</li><li>Zeměpis</li><li>Příroda</li><li>Kultura</li><li>Sport</li>
+          </ul>
+        </div>
+        <figure class="step-shot"><img src="/assets/img/hra-otazka.jpg" alt="Souboj o Chrudimsko: otázka se čtyřmi možnými odpověďmi" width="408" height="826" loading="lazy"></figure>
+      </li>
+      <li class="step">
+        <div class="step-text">
+          <span class="seal" aria-hidden="true">4</span>
+          <h3>Ukaž, kde leží odpověď</h3>
+          <p>Mapové výzvy prověří přehled i přesnost. Přibliž mapu, polož špendlík na hrad, řeku nebo město a potvrď ho dřív, než se přesypou hodiny. Čím blíž, tím líp.</p>
+        </div>
+        <figure class="step-shot"><img src="/assets/img/hra-mapa.jpg" alt="Mapová otázka: Kde leží Řím?" width="408" height="826" loading="lazy"></figure>
+      </li>
+    </ol>
+
+    <div class="victory">
+      <svg class="ico" aria-hidden="true"><use href="#i-crown"/></svg>
+      <h3>Kdo dobude sídla soupeřů, vládne</h3>
+      <p>Dobuď obě sídla soupeřů dřív, než padne to tvé. Groše z bitev se počítají do Síně slávy a v soutěži stoupáš v hodnostech od zemana až po hejtmana.</p>
+    </div>
+  </section>
+
+  <div class="band">
+    <section class="land-sec" id="rezimy" aria-labelledby="h-rezimy">
+      <div class="sec-head">
+        <p class="kicker">Herní režimy</p>
+        <h2 id="h-rezimy">Hraj, jak se ti hodí</h2>
+        <p class="sec-lead">Proti počítači, proti skutečným soupeřům, nebo s přáteli.</p>
+      </div>
+      <div class="modes">
+        <article class="mode">
+          <svg class="ico" aria-hidden="true"><use href="#i-crown"/></svg>
+          <h3>Boj o Korunu</h3>
+          <p>Utkej se s rody, které řídí počítač. Každý soupeř vyniká v něčem jiném.</p>
+        </article>
+        <article class="mode">
+          <svg class="ico" aria-hidden="true"><use href="#i-swords"/></svg>
+          <h3>Soutěž</h3>
+          <p>Změř síly se dvěma skutečnými hráči a stoupej od zemana až po hejtmana.</p>
+          <span class="badge">Propojený účet</span>
+        </article>
+        <article class="mode">
+          <svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <h3>Denní výzva</h3>
+          <p>Každý den nová sada otázek. Vrať se zítra a zkus to znovu.</p>
+        </article>
+        <article class="mode">
+          <svg class="ico" aria-hidden="true"><use href="#i-friends"/></svg>
+          <h3>Hra s přáteli</h3>
+          <p>Založ soukromou hru a pozvi přátele. Uvidíte, kdo zná Čechy nejlépe.</p>
+        </article>
+        <article class="mode">
+          <svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>
+          <h3>Vlastní otázky</h3>
+          <p>Sestav si vlastní sadu otázek a zahraj si ji s přáteli. Zdarma pro všechny.</p>
+        </article>
+      </div>
+    </section>
   </div>
 
-  <div class="shots">
-    <img src="/assets/img/01-dobyvej-panstvi.jpg" alt="Herní mapa s dobytými panstvími" width="540" height="960" loading="lazy">
-    <img src="/assets/img/02-otazka-je-tah.jpg" alt="Vědomostní otázka v souboji" width="540" height="960" loading="lazy">
-    <img src="/assets/img/03-mapove-vyzvy.jpg" alt="Mapová otázka" width="540" height="960" loading="lazy">
-    <img src="/assets/img/04-boj-o-korunu.jpg" alt="Výběr soupeřů v boji o Korunu" width="540" height="960" loading="lazy">
-  </div>
+  <section class="land-sec" id="zacni" aria-labelledby="h-zacni">
+    <div class="sec-head">
+      <p class="kicker">Začni hned</p>
+      <h2 id="h-zacni">Bez registrace, bez čekání</h2>
+    </div>
+    <div class="duo">
+      <div class="info">
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Hraj jako host</h3>
+        <p>Hru začneš jako host, bez jména a e-mailu. Až budeš chtít mít postup v bezpečí i na dalším zařízení, propojíš účet s e-mailem, Apple nebo Google a nic neztratíš. Propojený účet potřebuješ i pro soutěž.</p>
+      </div>
+      <div class="info">
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-coin"/></svg>Základní hra zdarma</h3>
+        <p>Webová verze je bez reklam. V mobilní aplikaci se zpravidla po každé třetí dohrané hře může ukázat reklama a za zlaťáky nebo zápas navíc si tam můžeš dobrovolně pustit krátké video.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>Hraj hned, bez registrace</h2>
-  <p>Hru začneš jako host, bez jména a e-mailu. Až budeš chtít mít postup v bezpečí i na dalším zařízení, propojíš účet s e-mailem, Apple nebo Google a nic neztratíš. Propojený účet potřebuješ i pro soutěž proti živým hráčům.</p>
-  <p>Základní hra je zdarma a webová verze je bez reklam. V mobilní aplikaci se zpravidla po každé třetí dohrané hře může ukázat reklama. Za zlaťáky nebo zápas navíc si tam také můžeš dobrovolně pustit krátké video. Vlastní otázky jsou zdarma pro všechny.</p>
-
-  <h2>Kontakt</h2>
-  <p>Dotazy, nápady a hlášení chyb posílej na <a href="mailto:vaclav@dyzi.cz">vaclav@dyzi.cz</a>. Více na stránce <a href="/podpora/">Podpora</a>.</p>
+  <section class="cta" aria-labelledby="h-cta">
+    <svg class="ico" aria-hidden="true"><use href="#i-swords"/></svg>
+    <h2 id="h-cta">Vytáhni do boje</h2>
+    <p>Stáhni si Hejtmana a dobuď své první panství.</p>
+    <div class="stores">
+      <a class="store" href="https://apps.apple.com/app/id6791612459"><small>Stáhnout v</small><span>App Store</span></a>
+      <a class="store" href="https://play.google.com/store/apps/details?id=cz.hejtman.app"><small>Nainstalovat z</small><span>Google Play</span></a>
+    </div>
+    <p class="cta-contact">Dotazy, nápady a hlášení chyb posílej na <a href="mailto:vaclav@dyzi.cz">vaclav@dyzi.cz</a>. Více na stránce <a href="/podpora/">Podpora</a>.</p>
+  </section>
 
 </main>
 
+<div class="wrap">
 <footer>
   <p class="links"><a href="/">Hejtman</a> <a href="/podminky/">Podmínky služby</a> <a href="/nakupy/">Nákupy a reklamace</a> <a href="/soukromi/">Ochrana soukromí</a> <a href="/smazani-uctu/">Smazání účtu</a> <a href="/podpora/">Podpora</a></p>
   <p>© 2026 Hejtman · DyZi s.r.o.</p>
