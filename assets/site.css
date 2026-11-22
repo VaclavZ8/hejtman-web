@@ -173,7 +173,8 @@ main.land{padding:0; border-radius:0; box-shadow:none; background:var(--parch);}
 .goal::before,.goal::after{content:""; flex:0 1 90px; height:1px; background:linear-gradient(90deg,transparent,var(--goldEdge));}
 .goal::after{transform:scaleX(-1);}
 .goal .ico{width:38px; height:38px; color:var(--gold); stroke-width:1.4;}
-.goal span,.sec-head h2,.cta .cta-sub{text-wrap:balance;}
+.goal span,.sec-head h2,.cta .cta-sub,.goal-sub,.modes-note{text-wrap:balance;}
+.goal-sub{max-width:560px; margin:10px auto 0; text-align:center; font-size:17px; font-style:italic; color:var(--inkSoft);}
 
 /* Herní režimy */
 .modes-sec{background:linear-gradient(180deg,#EADDBB,#E4D3AA); border-top:1px solid var(--edge);}
@@ -186,6 +187,7 @@ main.land{padding:0; border-radius:0; box-shadow:none; background:var(--parch);}
   box-shadow:0 0 0 3px #E8D8B0, 0 0 0 5px var(--gold), 0 10px 20px rgba(110,29,23,.25);}
 .modes h3{font-family:var(--display); font-weight:400; font-size:25px; line-height:1.1; color:var(--ink); margin:20px 0 4px;}
 .modes p{margin:0; font-size:15px; font-style:italic; color:var(--inkSoft);}
+.modes-note{max-width:560px; margin:52px auto 0; text-align:center; font-size:17px; color:var(--inkSoft);}
 
 /* Výzva k akci */
 .cta{position:relative; overflow:hidden; text-align:center; padding:96px 20px 68px; border-top:3px solid var(--goldEdge);
@@ -209,7 +211,7 @@ main.land{padding:0; border-radius:0; box-shadow:none; background:var(--parch);}
   .land-sec{padding:64px 18px;}
   .sec-head{margin-bottom:40px;}
   .modes{max-width:560px;}
-  .modes li{flex:0 0 33.333%; padding:12px 8px;}
+  .modes li{flex:0 0 50%; padding:12px 8px;}
   .modes li + li::before{display:none;}
 }
 @media(max-width:600px){
@@ -226,6 +228,8 @@ main.land{padding:0; border-radius:0; box-shadow:none; background:var(--parch);}
   .step h3{font-size:23px; margin-top:12px;}
   .step p{font-size:15px;}
   .goal{flex-direction:column; gap:8px; margin-top:56px;}
+  .goal-sub,.modes-note{font-size:16px;}
+  .modes-note{margin-top:36px;}
   .goal::before,.goal::after{display:none;}
   .modes li{flex:0 0 50%;}
   .modes .ico{width:58px; height:58px; padding:15px;}
